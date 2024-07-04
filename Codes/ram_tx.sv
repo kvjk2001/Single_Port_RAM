@@ -1,3 +1,14 @@
+//------------------------------------------------------------------------------
+// Project      : Single_Port_RAM
+// File Name    : ram_tx.sv
+// Developers   : K Vijay Kumar (vijaykrishnan@mirafra.com)
+// Created Date : 05/07/2024
+// Version      : V1.0
+//------------------------------------------------------------------------------
+// Copyright    : 2024(c) Manipal Center of Excellence. All rights reserved.
+//------------------------------------------------------------------------------
+
+
 `include "macros.svh"
 
 class ram_tx;

@@ -1,0 +1,331 @@
+# vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; add wave -position insertpoint sim:/top/duv/*; run -all; coverage report -detail; exit" 
+# Start time: 01:55:34 on Jul 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ram_intf(fast)
+# Loading work.ram_pkg(fast)
+# Loading work.top(fast)
+# Loading work.ram_intf(fast)
+# Loading work.ram_design(fast)
+# coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb
+#  add wave -position insertpoint sim:/top/duv/*
+#  run -all
+# [0]: GENERATOR Randomized transaction data_in=39, write_enb=1, read_enb=0, address=d
+# [0]: GENERATOR Randomized transaction data_in=28, write_enb=1, read_enb=0, address=1f
+# [0]: GENERATOR Randomized transaction data_in=c4, write_enb=1, read_enb=0, address=0
+# [0]: GENERATOR Randomized transaction data_in=43, write_enb=1, read_enb=0, address=b
+# [0]: GENERATOR Randomized transaction data_in=90, write_enb=1, read_enb=0, address=1
+# [0]: GENERATOR Randomized transaction data_in=c6, write_enb=1, read_enb=0, address=6
+# [0]: GENERATOR Randomized transaction data_in=21, write_enb=1, read_enb=0, address=c
+# [0]: GENERATOR Randomized transaction data_in=be, write_enb=1, read_enb=0, address=2
+# [0]: GENERATOR Randomized transaction data_in=6, write_enb=1, read_enb=0, address=9
+# [0]: GENERATOR Randomized transaction data_in=fa, write_enb=1, read_enb=0, address=15
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [180]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=39, write_enb=1, read_enb=0,address=d
+# [180]: INPUT FUNCTIONAL COVERAGE = 65
+# [180]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [180]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [180]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=d !!!!!!!!!!!!!!
+# [220]: REFERENCE write: addr= 13, data_in in mem= 57
+# [220]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=d !!!!!!!!!!!!!!
+# ***************Result***************
+# [220]: SCOREBOARD REF: data_out=x addr=13, MON: data_out=z addr=13
+# [220]: DATA MATCH FAILURE. MISMATCH count = 1
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [260]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=28, write_enb=1, read_enb=0,address=1f
+# [260]: INPUT FUNCTIONAL COVERAGE = 65
+# [260]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [260]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [260]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=1f !!!!!!!!!!!!!!
+# [300]: REFERENCE write: addr= 31, data_in in mem= 40
+# [300]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=1f !!!!!!!!!!!!!!
+# ***************Result***************
+# [300]: SCOREBOARD REF: data_out=x addr=31, MON: data_out=z addr=31
+# [300]: DATA MATCH FAILURE. MISMATCH count = 2
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [340]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=c4, write_enb=1, read_enb=0,address=0
+# [340]: INPUT FUNCTIONAL COVERAGE = 65
+# [340]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [340]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [340]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=0 !!!!!!!!!!!!!!
+# [380]: REFERENCE write: addr= 0, data_in in mem= 196
+# [380]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=0 !!!!!!!!!!!!!!
+# ***************Result***************
+# [380]: SCOREBOARD REF: data_out=x addr=0, MON: data_out=z addr=0
+# [380]: DATA MATCH FAILURE. MISMATCH count = 3
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [420]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=43, write_enb=1, read_enb=0,address=b
+# [420]: INPUT FUNCTIONAL COVERAGE = 65
+# [420]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [420]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [420]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=b !!!!!!!!!!!!!!
+# [460]: REFERENCE write: addr= 11, data_in in mem= 67
+# [460]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=b !!!!!!!!!!!!!!
+# ***************Result***************
+# [460]: SCOREBOARD REF: data_out=x addr=11, MON: data_out=z addr=11
+# [460]: DATA MATCH FAILURE. MISMATCH count = 4
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [500]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=90, write_enb=1, read_enb=0,address=1
+# [500]: INPUT FUNCTIONAL COVERAGE = 65
+# [500]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [500]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [500]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=1 !!!!!!!!!!!!!!
+# [540]: REFERENCE write: addr= 1, data_in in mem= 144
+# [540]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=1 !!!!!!!!!!!!!!
+# ***************Result***************
+# [540]: SCOREBOARD REF: data_out=x addr=1, MON: data_out=z addr=1
+# [540]: DATA MATCH FAILURE. MISMATCH count = 5
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [580]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=c6, write_enb=1, read_enb=0,address=6
+# [580]: INPUT FUNCTIONAL COVERAGE = 65
+# [580]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [580]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [580]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=6 !!!!!!!!!!!!!!
+# [620]: REFERENCE write: addr= 6, data_in in mem= 198
+# [620]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=6 !!!!!!!!!!!!!!
+# ***************Result***************
+# [620]: SCOREBOARD REF: data_out=x addr=6, MON: data_out=z addr=6
+# [620]: DATA MATCH FAILURE. MISMATCH count = 6
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [660]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=21, write_enb=1, read_enb=0,address=c
+# [660]: INPUT FUNCTIONAL COVERAGE = 65
+# [660]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [660]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [660]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=c !!!!!!!!!!!!!!
+# [700]: REFERENCE write: addr= 12, data_in in mem= 33
+# [700]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=c !!!!!!!!!!!!!!
+# ***************Result***************
+# [700]: SCOREBOARD REF: data_out=x addr=12, MON: data_out=z addr=12
+# [700]: DATA MATCH FAILURE. MISMATCH count = 7
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [740]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=be, write_enb=1, read_enb=0,address=2
+# [740]: INPUT FUNCTIONAL COVERAGE = 65
+# [740]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [740]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [740]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=2 !!!!!!!!!!!!!!
+# [780]: REFERENCE write: addr= 2, data_in in mem= 190
+# [780]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=2 !!!!!!!!!!!!!!
+# ***************Result***************
+# [780]: SCOREBOARD REF: data_out=x addr=2, MON: data_out=z addr=2
+# [780]: DATA MATCH FAILURE. MISMATCH count = 8
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [820]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=6, write_enb=1, read_enb=0,address=9
+# [820]: INPUT FUNCTIONAL COVERAGE = 65
+# [820]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [820]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [820]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=9 !!!!!!!!!!!!!!
+# [860]: REFERENCE write: addr= 9, data_in in mem= 6
+# [860]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=9 !!!!!!!!!!!!!!
+# ***************Result***************
+# [860]: SCOREBOARD REF: data_out=x addr=9, MON: data_out=z addr=9
+# [860]: DATA MATCH FAILURE. MISMATCH count = 9
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [900]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=fa, write_enb=1, read_enb=0,address=15
+# [900]: INPUT FUNCTIONAL COVERAGE = 65
+# [900]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=z
+# [900]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [900]: !!!!!!!!!!!!!SCOREBOARD MON data_out=z, ADDRESS=15 !!!!!!!!!!!!!!
+# [940]: REFERENCE write: addr= 21, data_in in mem= 250
+# [940]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=15 !!!!!!!!!!!!!!
+# ***************Result***************
+# [940]: SCOREBOARD REF: data_out=x addr=21, MON: data_out=z addr=21
+# [940]: DATA MATCH FAILURE. MISMATCH count = 10
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+# [940]: GENERATOR Randomized transaction data_in=18, write_enb=0, read_enb=1, address=10
+# [940]: GENERATOR Randomized transaction data_in=4b, write_enb=0, read_enb=1, address=6
+# [940]: GENERATOR Randomized transaction data_in=aa, write_enb=0, read_enb=1, address=15
+# [940]: GENERATOR Randomized transaction data_in=7e, write_enb=0, read_enb=1, address=14
+# [940]: GENERATOR Randomized transaction data_in=68, write_enb=0, read_enb=1, address=1e
+# [940]: GENERATOR Randomized transaction data_in=13, write_enb=0, read_enb=1, address=1e
+# [940]: GENERATOR Randomized transaction data_in=b6, write_enb=0, read_enb=1, address=2
+# [940]: GENERATOR Randomized transaction data_in=9f, write_enb=0, read_enb=1, address=15
+# [940]: GENERATOR Randomized transaction data_in=da, write_enb=0, read_enb=1, address=1
+# [940]: GENERATOR Randomized transaction data_in=20, write_enb=0, read_enb=1, address=18
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1140]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=18, write_enb=0, read_enb=1,address=10
+# [1140]: INPUT FUNCTIONAL COVERAGE = 90
+# [1140]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=x
+# [1140]: OUTPUT FUNCTIONAL COVERAGE = 0
+# [1140]: !!!!!!!!!!!!!SCOREBOARD MON data_out=x, ADDRESS=10 !!!!!!!!!!!!!!
+# [1180]: REFERENCE read: addr=16, data_out from mem= x
+# [1180]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=10 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1180]: SCOREBOARD REF: data_out=x addr=16, MON: data_out=x addr=16
+# [1180]: DATA MATCH SUCCESSFUL. MATCH count = 1
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1220]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=4b, write_enb=0, read_enb=1,address=6
+# [1220]: INPUT FUNCTIONAL COVERAGE = 90
+# [1220]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=c6
+# [1220]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1220]: !!!!!!!!!!!!!SCOREBOARD MON data_out=c6, ADDRESS=6 !!!!!!!!!!!!!!
+# [1260]: REFERENCE read: addr=6, data_out from mem= 198
+# [1260]: !!!!!!!!!!!!!SCOREBOARD REF data_out=c6, ADDRESS=6 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1260]: SCOREBOARD REF: data_out=c6 addr=6, MON: data_out=c6 addr=6
+# [1260]: DATA MATCH SUCCESSFUL. MATCH count = 2
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1300]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=aa, write_enb=0, read_enb=1,address=15
+# [1300]: INPUT FUNCTIONAL COVERAGE = 90
+# [1300]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=fa
+# [1300]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1300]: !!!!!!!!!!!!!SCOREBOARD MON data_out=fa, ADDRESS=15 !!!!!!!!!!!!!!
+# [1340]: REFERENCE read: addr=21, data_out from mem= 250
+# [1340]: !!!!!!!!!!!!!SCOREBOARD REF data_out=fa, ADDRESS=15 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1340]: SCOREBOARD REF: data_out=fa addr=21, MON: data_out=fa addr=21
+# [1340]: DATA MATCH SUCCESSFUL. MATCH count = 3
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1380]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=7e, write_enb=0, read_enb=1,address=14
+# [1380]: INPUT FUNCTIONAL COVERAGE = 90
+# [1380]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=x
+# [1380]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1380]: !!!!!!!!!!!!!SCOREBOARD MON data_out=x, ADDRESS=14 !!!!!!!!!!!!!!
+# [1420]: REFERENCE read: addr=20, data_out from mem= x
+# [1420]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=14 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1420]: SCOREBOARD REF: data_out=x addr=20, MON: data_out=x addr=20
+# [1420]: DATA MATCH SUCCESSFUL. MATCH count = 4
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1460]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=68, write_enb=0, read_enb=1,address=1e
+# [1460]: INPUT FUNCTIONAL COVERAGE = 90
+# [1460]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=x
+# [1460]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1460]: !!!!!!!!!!!!!SCOREBOARD MON data_out=x, ADDRESS=1e !!!!!!!!!!!!!!
+# [1500]: REFERENCE read: addr=30, data_out from mem= x
+# [1500]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=1e !!!!!!!!!!!!!!
+# ***************Result***************
+# [1500]: SCOREBOARD REF: data_out=x addr=30, MON: data_out=x addr=30
+# [1500]: DATA MATCH SUCCESSFUL. MATCH count = 5
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1540]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=13, write_enb=0, read_enb=1,address=1e
+# [1540]: INPUT FUNCTIONAL COVERAGE = 90
+# [1540]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=x
+# [1540]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1540]: !!!!!!!!!!!!!SCOREBOARD MON data_out=x, ADDRESS=1e !!!!!!!!!!!!!!
+# [1580]: REFERENCE read: addr=30, data_out from mem= x
+# [1580]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=1e !!!!!!!!!!!!!!
+# ***************Result***************
+# [1580]: SCOREBOARD REF: data_out=x addr=30, MON: data_out=x addr=30
+# [1580]: DATA MATCH SUCCESSFUL. MATCH count = 6
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1620]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=b6, write_enb=0, read_enb=1,address=2
+# [1620]: INPUT FUNCTIONAL COVERAGE = 90
+# [1620]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=be
+# [1620]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1620]: !!!!!!!!!!!!!SCOREBOARD MON data_out=be, ADDRESS=2 !!!!!!!!!!!!!!
+# [1660]: REFERENCE read: addr=2, data_out from mem= 190
+# [1660]: !!!!!!!!!!!!!SCOREBOARD REF data_out=be, ADDRESS=2 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1660]: SCOREBOARD REF: data_out=be addr=2, MON: data_out=be addr=2
+# [1660]: DATA MATCH SUCCESSFUL. MATCH count = 7
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1700]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=9f, write_enb=0, read_enb=1,address=15
+# [1700]: INPUT FUNCTIONAL COVERAGE = 90
+# [1700]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=fa
+# [1700]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1700]: !!!!!!!!!!!!!SCOREBOARD MON data_out=fa, ADDRESS=15 !!!!!!!!!!!!!!
+# [1740]: REFERENCE read: addr=21, data_out from mem= 250
+# [1740]: !!!!!!!!!!!!!SCOREBOARD REF data_out=fa, ADDRESS=15 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1740]: SCOREBOARD REF: data_out=fa addr=21, MON: data_out=fa addr=21
+# [1740]: DATA MATCH SUCCESSFUL. MATCH count = 8
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1780]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=da, write_enb=0, read_enb=1,address=1
+# [1780]: INPUT FUNCTIONAL COVERAGE = 90
+# [1780]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=90
+# [1780]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1780]: !!!!!!!!!!!!!SCOREBOARD MON data_out=90, ADDRESS=1 !!!!!!!!!!!!!!
+# [1820]: REFERENCE read: addr=1, data_out from mem= 144
+# [1820]: !!!!!!!!!!!!!SCOREBOARD REF data_out=90, ADDRESS=1 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1820]: SCOREBOARD REF: data_out=90 addr=1, MON: data_out=90 addr=1
+# [1820]: DATA MATCH SUCCESSFUL. MATCH count = 9
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+#  
+# //////////////////////////////////////// Transaction starts//////////////////////////////////
+# [1860]: DRIVER DRIVING DATA TO THE INTERFACE: rst=1: data_in=20, write_enb=0, read_enb=1,address=18
+# [1860]: INPUT FUNCTIONAL COVERAGE = 90
+# [1860]: MONITOR PASSING THE DATA TO SCOREBOARD: data_out=x
+# [1860]: OUTPUT FUNCTIONAL COVERAGE = 100
+# [1860]: !!!!!!!!!!!!!SCOREBOARD MON data_out=x, ADDRESS=18 !!!!!!!!!!!!!!
+# [1900]: REFERENCE read: addr=24, data_out from mem= x
+# [1900]: !!!!!!!!!!!!!SCOREBOARD REF data_out=x, ADDRESS=18 !!!!!!!!!!!!!!
+# ***************Result***************
+# [1900]: SCOREBOARD REF: data_out=x addr=24, MON: data_out=x addr=24
+# [1900]: DATA MATCH SUCCESSFUL. MATCH count = 10
+# ***************Result***************
+# //////////////////////////////////////// Transaction ends//////////////////////////////////
+# ** Note: $finish    : ram_top.sv(77)
+#    Time: 1900 ns  Iteration: 3  Instance: /top
+# Saving coverage database on exit...
+# End time: 01:55:36 on Jul 05,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

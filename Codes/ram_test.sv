@@ -1,3 +1,14 @@
+//------------------------------------------------------------------------------
+// Project      : Single_Port_RAM
+// File Name    : ram_test.sv
+// Developers   : K Vijay Kumar (vijaykrishnan@mirafra.com)
+// Created Date : 05/07/2024
+// Version      : V1.0
+//------------------------------------------------------------------------------
+// Copyright    : 2024(c) Manipal Center of Excellence. All rights reserved.
+//------------------------------------------------------------------------------
+
+
 `include "macros.svh"
 
 class ram_test;
@@ -43,7 +54,7 @@ class test_write extends ram_test;
     
     begin
     test_write_tx_write = new();
-    test_env.gtr.original_tx = test_write_tx_write;
+    test_env.env_gtr.original_tx = test_write_tx_write;
     end
     
     test_env.start();
@@ -65,7 +76,7 @@ class test_read extends ram_test;
 
     begin
     test_read_tx_read = new();
-    test_env.gtr.original_tx = test_read_tx_read;
+    test_env.env_gtr.original_tx = test_read_tx_read;
     end
 
     test_env.start();
@@ -87,11 +98,11 @@ class test_regression extends ram_test;
     test_env.build();
     
     test_write_tx_write = new();
-    test_env.gtr.original_tx = test_write_tx_write;
+    test_env.env_gtr.original_tx = test_write_tx_write;
     test_env.start();
     
     test_read_tx_read = new();
-    test_env.gtr.original_tx = test_read_tx_read;
+    test_env.env_gtr.original_tx = test_read_tx_read;
     test_env.start();
 
   endtask

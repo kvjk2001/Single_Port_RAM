@@ -1,0 +1,16 @@
+var g_data = {
+c89:[4,'WRITE',[],,'88',1,1,'cg_drv','86','/ram_top_sv_unit/ram_drv',[[],[0,'1','10',,'wrt[0]'],[0,'1','0',1,'wrt[1]']],[]],
+c90:[4,'READ',[],,'88',1,1,'cg_drv','86','/ram_top_sv_unit/ram_drv',[[],[0,'1','0',1,'rd[0]'],[0,'1','10',,'rd[1]']],[]],
+c91:[4,'DATA_IN',[],,'88',1,1,'cg_drv','86','/ram_top_sv_unit/ram_drv',[[],[0,'1','10',,'data']],[]],
+c92:[4,'ADDRESS',[],,'88',1,1,'cg_drv','86','/ram_top_sv_unit/ram_drv',[[],[0,'1','10',,'addr']],[]],
+c93:[5,'WRXRD',['WRITE','READ'],,'88',1,1,'cg_drv','86','/ram_top_sv_unit/ram_drv',[[],[4,'1','10',,'wrt[0]','rd[1]']],[[],[4,'1','0',1,'wrt[0]','rd[0]'],[4,'1','0',1,'wrt[1]','rd[0]'],[4,'1','0',1,'wrt[1]','rd[1]']]],
+c99:[4,'DATA_OUT',[],,'98',1,1,'cg_mon','96','/ram_top_sv_unit/ram_mon',[[],[0,'1','0',1,'dout']],[]],
+c143:[4,'WRITE',[],,'142',1,1,'cg_drv','140','work.ram_top_sv_unit::ram_drv',[[],[0,'1','10',,'wrt[0]'],[0,'1','0',1,'wrt[1]']],[]],
+c144:[4,'READ',[],,'142',1,1,'cg_drv','140','work.ram_top_sv_unit::ram_drv',[[],[0,'1','0',1,'rd[0]'],[0,'1','10',,'rd[1]']],[]],
+c145:[4,'DATA_IN',[],,'142',1,1,'cg_drv','140','work.ram_top_sv_unit::ram_drv',[[],[0,'1','10',,'data']],[]],
+c146:[4,'ADDRESS',[],,'142',1,1,'cg_drv','140','work.ram_top_sv_unit::ram_drv',[[],[0,'1','10',,'addr']],[]],
+c147:[5,'WRXRD',['WRITE','READ'],,'142',1,1,'cg_drv','140','work.ram_top_sv_unit::ram_drv',[[],[4,'1','10',,'wrt[0]','rd[1]']],[[],[4,'1','0',1,'wrt[0]','rd[0]'],[4,'1','0',1,'wrt[1]','rd[0]'],[4,'1','0',1,'wrt[1]','rd[1]']]],
+c153:[4,'DATA_OUT',[],,'152',1,1,'cg_mon','150','work.ram_top_sv_unit::ram_mon',[[],[0,'1','0',1,'dout']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

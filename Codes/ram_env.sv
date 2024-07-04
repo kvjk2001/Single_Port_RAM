@@ -1,3 +1,15 @@
+//------------------------------------------------------------------------------
+// Project      : Single_Port_RAM
+// File Name    : ram_env.sv
+// Developers   : K Vijay Kumar (vijaykrishnan@mirafra.com)
+// Created Date : 05/07/2024
+// Version      : V1.0
+//------------------------------------------------------------------------------
+// Copyright    : 2024(c) Manipal Center of Excellence. All rights reserved.
+//------------------------------------------------------------------------------
+
+
+
 `include "macros.svh"
 
 class ram_env;
@@ -21,11 +33,11 @@ class ram_env;
   
   //Declaring handles for components
   //generator, driver, monitor, reference model and scoreboard
-  ram_gtr gtr;
-  ram_drv drv;
-  ram_mon mon;
-  ram_refer refer;
-  ram_sb sb;
+  ram_gtr env_gtr;
+  ram_drv env_drv;
+  ram_mon env_mon;
+  ram_ref env_ref;
+  ram_sb env_sb;
   
   //Explicitly overriding the constructor to connect the virtual interfaces
   //from driver, monitor and reference model to test
@@ -45,25 +57,25 @@ class ram_env;
       mbx_ms=new();
       
       //Creating objects for components and passing the arguments in the function new() i.e the constructor
-      gtr=new(mbx_gd);
-      drv=new(mbx_gd,mbx_dr,v_intf_d);
-      mon=new(v_intf_m,mbx_ms);
-      refer=new(mbx_dr,mbx_rs,v_intf_r);
-      sb=new(mbx_rs,mbx_ms);
+      env_gtr=new(mbx_gd);
+      env_drv=new(mbx_gd,mbx_dr,v_intf_d);
+      env_mon=new(v_intf_m,mbx_ms);
+      env_ref=new(mbx_dr,mbx_rs,v_intf_r);
+      env_sb=new(mbx_rs,mbx_ms);
     end
   endtask
   
   //Task which calls the start methods of each component and also calls the compare and report method
   task start();
     fork
-      gtr.start();
-      drv.start();
-      mon.start();
-      sb.start();
-      refer.start();
+      env_gtr.start();
+      env_drv.start();
+      env_mon.start();
+      env_sb.start();
+      env_ref.start();
     join
     
-    sb.compare_report();
+    env_sb.compare_report();
   endtask
   
 endclass

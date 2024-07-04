@@ -1,10 +1,23 @@
-`timescale 1ns/100ps
+//------------------------------------------------------------------------------
+// Project      : Single_Port_RAM
+// File Name    : ram_top.sv
+// Developers   : K Vijay Kumar (vijaykrishnan@mirafra.com)
+// Created Date : 05/07/2024
+// Version      : V1.0
+//------------------------------------------------------------------------------
+// Copyright    : 2024(c) Manipal Center of Excellence. All rights reserved.
+//------------------------------------------------------------------------------
 
-`include "RAM.sv"
+`include "macros.svh"
+
+`include "ram_design.v"
 `include "ram_intf.sv"
 `include "ram_pkg.sv"
 
-module top(); 
+module top();
+
+  import ram_pkg::*;
+ 
   //Declaring variables for clock and reset
   logic clk;
   logic rst;
@@ -13,7 +26,7 @@ module top();
   initial
     begin
       clk <= 0;
-      forever #10 clk=~clk; 
+      forever #20 clk=~clk; 
     end
   
   //Asserting and de-asserting the rst
@@ -29,7 +42,7 @@ module top();
   ram_intf intf_inst(clk, rst);
   
   //Instantiating the DUV
-  RAM duv(
+  ram_design duv(
     .data_in(intf_inst.data_in),
     .write_enb(intf_inst.write_en),
     .read_enb(intf_inst.read_en),
@@ -49,11 +62,11 @@ module top();
   //Calling the test's run task which starts the execution of the testbench architectur
   initial
     begin
-      top_test = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_refer);
-      top_test_write = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_refer);
-      top_test_read = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_refer);
+      top_test = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
+      top_test_write = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
+      top_test_read = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
       
-      top_test_regression = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_refer);
+      top_test_regression = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
       
       //top_test.run();
       //top_test_write.run();

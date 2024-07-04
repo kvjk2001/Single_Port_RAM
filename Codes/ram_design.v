@@ -1,4 +1,4 @@
-module RAM(
+module ram_design(
   clk, // Clk input
   reset, //Reset input active low
   address, // Address Input

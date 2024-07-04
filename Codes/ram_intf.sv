@@ -1,3 +1,14 @@
+//------------------------------------------------------------------------------
+// Project      : Single_Port_RAM
+// File Name    : ram_intf.sv
+// Developers   : K Vijay Kumar (vijaykrishnan@mirafra.com)
+// Created Date : 05/07/2024
+// Version      : V1.0
+//------------------------------------------------------------------------------
+// Copyright    : 2024(c) Manipal Center of Excellence. All rights reserved.
+//------------------------------------------------------------------------------
+
+
 interface ram_intf(input bit clk,rst);
   
   //Declaring signals with width
@@ -28,13 +39,13 @@ interface ram_intf(input bit clk,rst);
   endclocking
   
   //clocking block for reference model
-  clocking cb_refer@(posedge clk);
+  clocking cb_ref@(posedge clk);
     default input #0 output #0;
   endclocking
   
   //modports for driver, monitor and reference model
   modport mp_drv(clocking cb_drv);
-    modport mp_mon(clocking cb_mon);
-      modport mp_refer(clocking cb_refer);
+  modport mp_mon(clocking cb_mon);
+  modport mp_ref(clocking cb_ref);
     
 endinterface

@@ -1,0 +1,7 @@
+var g_db_data = [
+{dummy:0},
+{name:'cg_drv',f:1,type:6,id:88,tb:'10',h:'8',m:'2',hp:'80.00%',cov:['90.00%','G'],g:'100.00%',gp:['90.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/ram_top_sv_unit/ram_drv',parent:'86'},
+{name:'cg_mon',f:1,type:6,id:98,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/ram_top_sv_unit/ram_mon',parent:'96'},
+{name:'cg_drv',f:1,type:6,id:142,tb:'10',h:'8',m:'2',hp:'80.00%',cov:['90.00%','G'],g:'100.00%',gp:['90.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.ram_top_sv_unit::ram_drv',parent:'140'},
+{name:'cg_mon',f:1,type:6,id:152,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','true']],hdlPath:'work.ram_top_sv_unit::ram_mon',parent:'150'}];
+processConsCovergroupsData(g_db_data);

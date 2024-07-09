@@ -48,7 +48,7 @@ class ram_drv;
   
   //Task to drive the stimuli
   task start();
-   repeat(3) @(v_intf_drv.cb_drv);
+   repeat(1) @(v_intf_drv.cb_drv);
     for(int i=0;i<`num_transactions;i++)
       begin
         

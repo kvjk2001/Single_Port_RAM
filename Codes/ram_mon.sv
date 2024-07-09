@@ -39,7 +39,7 @@ class ram_mon;
   
   //Task to collect the output from the interface
   task start();
-    repeat(4) @(v_intf_mon.cb_mon);
+    repeat(2) @(v_intf_mon.cb_mon);
     for(int i=0;i<`num_transactions;i++)
       begin
         mon_tx=new();

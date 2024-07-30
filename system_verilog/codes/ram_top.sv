@@ -62,18 +62,30 @@ module top();
   //Calling the test's run task which starts the execution of the testbench architectur
   initial
     begin
-      top_test = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
-      top_test_write = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
-      top_test_read = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
-      
-      top_test_regression = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
-      
-      //top_test.run();
-      //top_test_write.run();
-      //top_test_read.run();
-      
-      top_test_regression.run();
-      
+			if($test$plusargs ("base"))
+			begin
+      	top_test = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
+				top_test.run();
+			end
+
+			if($test$plusargs ("write"))
+			begin
+      	top_test_write = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
+      	top_test_write.run();
+			end
+
+			if($test$plusargs ("read"))	
+			begin
+				top_test_read = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
+  			top_test_read.run();
+			end    
+
+			if($test$plusargs ("regression"))
+			begin
+      	top_test_regression = new(intf_inst.mp_drv,intf_inst.mp_mon,intf_inst.mp_ref);
+      	top_test_regression.run();
+			end
+        
       $finish();
     end
   

@@ -12,4 +12,4 @@ o	Changes in the RAM happen at positive edge of clock
 o	Asynchronous active low reset. On assertion, the data output becomes ‘z’ 
 o	The write operation into the RAM is supported. For invalid address, the RAM does nothing  
 o	The read operation from the RAM is supported. For invalid address, i.e., address value > that supported by the address width, the invalid address is truncated to fit in the address width and the data read from the RAM will be done using that truncated location
-o Simultaneous read and write operation is not supported
+o Simultaneous read and write operation is not supported		

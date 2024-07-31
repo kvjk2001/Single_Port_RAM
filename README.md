@@ -1,9 +1,9 @@
 # Single Port RAM
 
-**Description:**
-A single port memory is a type of memory that can be accessed by only one device or process at a time. In this type of memory, data can be written and read from the same port but not simultaneously. It is generally used in applications where only one processor is used, and the memory is not required to be accessed by multiple processors simultaneously.
+**Description:**  
+ A single port memory is a type of memory that can be accessed by only one device or process at a time. In this type of memory, data can be written and read from the same port but not simultaneously. It is generally used in applications where only one processor is used, and the memory is not required to be accessed by multiple processors simultaneously.
 
-**Features**
+**Features:**  
   * The design is a single port RAM  
   * The RAM clock frequency is 25 MHz
   * The depth of the RAM is parameterized

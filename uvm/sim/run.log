@@ -1,0 +1,182 @@
+# vsim -c -novopt -suppress 12110 work.top -l run.log -do "/*; add wave -r /*; run -all; exit;" -wlf waveform.wlf 
+# Start time: 23:04:34 on Jul 31,2024
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Refreshing /fetools/work_area/frontend/vijaykrishnan/Single_Port_RAM/uvm/sim/work.top
+# Refreshing /fetools/work_area/frontend/vijaykrishnan/Single_Port_RAM/uvm/sim/work.top_sv_unit
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_sv_unit
+# Loading work.top
+# Refreshing /fetools/work_area/frontend/vijaykrishnan/Single_Port_RAM/uvm/sim/work.ram_design
+# Loading work.ram_design
+# Refreshing /fetools/work_area/frontend/vijaykrishnan/Single_Port_RAM/uvm/sim/work.intf
+# Loading work.intf
+# Loading mtiUvm.questa_uvm_pkg
+# ** Warning: (vsim-3764) ../src/tb/reference.sv(27): Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top_sv_unit File: ../src/tb/top.sv
+# ** Warning: (vsim-3764) ../src/tb/reference.sv(56): Stand-alone call to function 'try_put' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top_sv_unit File: ../src/tb/top.sv
+# ** Warning: (vsim-3764) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/tlm1/uvm_analysis_port.svh(114): Stand-alone call to function 'write' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /uvm_pkg::uvm_analysis_imp #(top_sv_unit::sequence_item, top_sv_unit::reference) File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# /*
+# invalid command name "/*"
+#  add wave -r /*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top               test                      -     @479 
+#   env                      environment               -     @490 
+#     a_agent                active_agent              -     @497 
+#       drv                  driver                    -     @650 
+#         rsp_port           uvm_analysis_port         -     @665 
+#         seq_item_port      uvm_seq_item_pull_port    -     @657 
+#       in_mon               in_monitor                -     @673 
+#         in_mon2cov_ref     uvm_analysis_port         -     @686 
+#       seq                  sequencer                 -     @541 
+#         rsp_export         uvm_analysis_export       -     @548 
+#         seq_item_export    uvm_seq_item_pull_imp     -     @642 
+#         arbitration_queue  array                     0     -    
+#         lock_queue         array                     0     -    
+#         num_last_reqs      integral                  32    'd1  
+#         num_last_rsps      integral                  32    'd1  
+#     cov                    coverage                  -     @518 
+#       analysis_imp         uvm_analysis_imp          -     @525 
+#       cov2in_mon           uvm_analysis_imp_in_mon   -     @711 
+#       cov2out_mon          uvm_analysis_imp_out_mon  -     @719 
+#     p_agent                passive_agent             -     @504 
+#       out_mon              out_monitor               -     @728 
+#         out_mon2cov_sb     uvm_analysis_port         -     @736 
+#     refer                  reference                 -     @511 
+#       ref2in_mon           uvm_analysis_imp          -     @752 
+#       ref2sb               uvm_nonblocking_put_port  -     @760 
+#     sb                     scoreboard                -     @533 
+#       sb2out_mon           uvm_analysis_imp          -     @777 
+#       sb2ref               uvm_nonblocking_put_imp   -     @769 
+# ----------------------------------------------------------------
+# UVM_INFO ../src/tb/driver.sv(46) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] ---------------------------Driving Data----------------------------------
+# UVM_INFO ../src/tb/driver.sv(47) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] Reset = 0
+# UVM_INFO ../src/tb/driver.sv(48) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] Read Enable = 0
+# UVM_INFO ../src/tb/driver.sv(49) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] Write Enable = 1
+# UVM_INFO ../src/tb/driver.sv(50) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] Data In = fc
+# UVM_INFO ../src/tb/driver.sv(51) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] Address = 1
+# UVM_INFO ../src/tb/driver.sv(52) @ 5: uvm_test_top.env.a_agent.drv [DRIVER] ------------------------------------------------------------------------------
+# UVM_INFO ../src/tb/driver.sv(46) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] ---------------------------Driving Data----------------------------------
+# UVM_INFO ../src/tb/driver.sv(47) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] Reset = 1
+# UVM_INFO ../src/tb/driver.sv(48) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] Read Enable = 1
+# UVM_INFO ../src/tb/driver.sv(49) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] Write Enable = 0
+# UVM_INFO ../src/tb/driver.sv(50) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] Data In = ed
+# UVM_INFO ../src/tb/driver.sv(51) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] Address = 1
+# UVM_INFO ../src/tb/driver.sv(52) @ 15: uvm_test_top.env.a_agent.drv [DRIVER] ------------------------------------------------------------------------------
+# UVM_INFO ../src/tb/reference.sv(46) @ 15: uvm_test_top.env.refer [REF] ------------------------------NEW PACKET AT REF------------------------------------
+# UVM_INFO ../src/tb/reference.sv(47) @ 15: uvm_test_top.env.refer [REF] Reset = 1
+# UVM_INFO ../src/tb/reference.sv(48) @ 15: uvm_test_top.env.refer [REF] Read Enable = 0
+# UVM_INFO ../src/tb/reference.sv(49) @ 15: uvm_test_top.env.refer [REF] Write Enable = 1
+# UVM_INFO ../src/tb/reference.sv(50) @ 15: uvm_test_top.env.refer [REF] Data In = fc
+# UVM_INFO ../src/tb/reference.sv(51) @ 15: uvm_test_top.env.refer [REF] Address = 1
+# UVM_INFO ../src/tb/reference.sv(52) @ 15: uvm_test_top.env.refer [REF] Data Out = 0
+# UVM_INFO ../src/tb/reference.sv(53) @ 15: uvm_test_top.env.refer [REF] -----------------------------------------------------------------------------------
+# UVM_INFO ../src/tb/reference.sv(46) @ 25: uvm_test_top.env.refer [REF] ------------------------------NEW PACKET AT REF------------------------------------
+# UVM_INFO ../src/tb/reference.sv(47) @ 25: uvm_test_top.env.refer [REF] Reset = 1
+# UVM_INFO ../src/tb/reference.sv(48) @ 25: uvm_test_top.env.refer [REF] Read Enable = 1
+# UVM_INFO ../src/tb/reference.sv(49) @ 25: uvm_test_top.env.refer [REF] Write Enable = 0
+# UVM_INFO ../src/tb/reference.sv(50) @ 25: uvm_test_top.env.refer [REF] Data In = ed
+# UVM_INFO ../src/tb/reference.sv(51) @ 25: uvm_test_top.env.refer [REF] Address = 1
+# UVM_INFO ../src/tb/reference.sv(52) @ 25: uvm_test_top.env.refer [REF] Data Out = fc
+# UVM_INFO ../src/tb/reference.sv(53) @ 25: uvm_test_top.env.refer [REF] -----------------------------------------------------------------------------------
+# UVM_INFO ../src/tb/out_monitor.sv(48) @ 25: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] ----------------------------Data sampled----------------------
+# UVM_INFO ../src/tb/out_monitor.sv(49) @ 25: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] data sampled = 0
+# UVM_INFO ../src/tb/out_monitor.sv(50) @ 25: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] Address = 1
+# UVM_INFO ../src/tb/out_monitor.sv(51) @ 25: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] ---------------------------------------------------------------
+# UVM_INFO ../src/tb/scoreboard.sv(70) @ 25: uvm_test_top.env.sb [Check_start] -----------------------------Start Check-----------------------
+# UVM_INFO ../src/tb/scoreboard.sv(71) @ 25: uvm_test_top.env.sb [REF_in_SB] data_out = 0
+# UVM_INFO ../src/tb/scoreboard.sv(72) @ 25: uvm_test_top.env.sb [MON_in_SB] data_out = 0
+# UVM_INFO ../src/tb/scoreboard.sv(73) @ 25: uvm_test_top.env.sb [MATCH] match count = 1
+# UVM_INFO ../src/tb/scoreboard.sv(74) @ 25: uvm_test_top.env.sb [Check_stop] -----------------------------Stop Check-----------------------
+# UVM_INFO ../src/tb/reference.sv(46) @ 35: uvm_test_top.env.refer [REF] ------------------------------NEW PACKET AT REF------------------------------------
+# UVM_INFO ../src/tb/reference.sv(47) @ 35: uvm_test_top.env.refer [REF] Reset = 1
+# UVM_INFO ../src/tb/reference.sv(48) @ 35: uvm_test_top.env.refer [REF] Read Enable = 1
+# UVM_INFO ../src/tb/reference.sv(49) @ 35: uvm_test_top.env.refer [REF] Write Enable = 0
+# UVM_INFO ../src/tb/reference.sv(50) @ 35: uvm_test_top.env.refer [REF] Data In = ed
+# UVM_INFO ../src/tb/reference.sv(51) @ 35: uvm_test_top.env.refer [REF] Address = 1
+# UVM_INFO ../src/tb/reference.sv(52) @ 35: uvm_test_top.env.refer [REF] Data Out = fc
+# UVM_INFO ../src/tb/reference.sv(53) @ 35: uvm_test_top.env.refer [REF] -----------------------------------------------------------------------------------
+# UVM_INFO ../src/tb/out_monitor.sv(48) @ 35: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] ----------------------------Data sampled----------------------
+# UVM_INFO ../src/tb/out_monitor.sv(49) @ 35: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] data sampled = fc
+# UVM_INFO ../src/tb/out_monitor.sv(50) @ 35: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] Address = 1
+# UVM_INFO ../src/tb/out_monitor.sv(51) @ 35: uvm_test_top.env.p_agent.out_mon [OUTPUT_MONITOR] ---------------------------------------------------------------
+# UVM_INFO ../src/tb/scoreboard.sv(70) @ 35: uvm_test_top.env.sb [Check_start] -----------------------------Start Check-----------------------
+# UVM_INFO ../src/tb/scoreboard.sv(71) @ 35: uvm_test_top.env.sb [REF_in_SB] data_out = fc
+# UVM_INFO ../src/tb/scoreboard.sv(72) @ 35: uvm_test_top.env.sb [MON_in_SB] data_out = fc
+# UVM_INFO ../src/tb/scoreboard.sv(73) @ 35: uvm_test_top.env.sb [MATCH] match count = 2
+# UVM_INFO ../src/tb/scoreboard.sv(74) @ 35: uvm_test_top.env.sb [Check_stop] -----------------------------Stop Check-----------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 45: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../src/tb/coverage.sv(92) @ 45: uvm_test_top.env.cov [COVERAGE] ----------------------------Coverage Report----------------------
+# UVM_INFO ../src/tb/coverage.sv(93) @ 45: uvm_test_top.env.cov [Input Coverage] Input Coverage = 83.333333
+# UVM_INFO ../src/tb/coverage.sv(94) @ 45: uvm_test_top.env.cov [Output Coverage] Output Coverage = 100.000000
+# UVM_INFO ../src/tb/coverage.sv(95) @ 45: uvm_test_top.env.cov [COVERAGE] -----------------------------------------------------------------
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   64
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COVERAGE]     2
+# [Check_start]     2
+# [Check_stop]     2
+# [DRIVER]    14
+# [Input Coverage]     1
+# [MATCH]     2
+# [MON_in_SB]     2
+# [OUTPUT_MONITOR]     8
+# [Output Coverage]     1
+# [Questa UVM]     2
+# [REF]    24
+# [REF_in_SB]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 45 ns  Iteration: 53  Instance: /top
+# End time: 23:04:37 on Jul 31,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 4

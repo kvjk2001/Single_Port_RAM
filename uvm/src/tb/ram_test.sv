@@ -1,11 +1,11 @@
-class test extends uvm_test;
+class ram_test extends uvm_test;
 
 	//registering test class with factory	
-	`uvm_component_utils(test)
+	`uvm_component_utils(ram_test)
 
 	//declaring handles for sequence and environment classes
 	regression_sequence packet_seq;
-	environment env;
+	ram_environment env;
 
 	//declaring functions
 	extern function new(string name = "test", uvm_component parent);
@@ -15,25 +15,25 @@ class test extends uvm_test;
 endclass
 
 	//defining class constructor
-	function test::new(string name = "test", uvm_component parent);
+	function ram_test::new(string name = "test", uvm_component parent);
 		super.new(name, parent);
 	endfunction	
 
 	//defining build phase
-	function void test::build_phase(uvm_phase phase);
+	function void ram_test::build_phase(uvm_phase phase);
 		super.build_phase(phase);
 		packet_seq = regression_sequence::type_id::create("packet_seq", this);
-		env = environment::type_id::create("env", this);
+		env = ram_environment::type_id::create("env", this);
 	endfunction
 
 	//defining end of elaboration phase
-	function void test::end_of_elaboration();
+	function void ram_test::end_of_elaboration();
 		super.end_of_elaboration();
 		print();
 	endfunction
 
 	//defining run phase
-	task test::run_phase(uvm_phase phase);
+	task ram_test::run_phase(uvm_phase phase);
 		super.run_phase(phase);
 		phase.raise_objection(this);
 		packet_seq.start(env.a_agent.seq);

@@ -3,11 +3,11 @@ import uvm_pkg::*;
 
 //including required files
 `include "uvm_macros.svh"
-`include "macros.sv"
+`include "ram_macros.sv"
 
-`include "package.sv"
+`include "ram_package.sv"
 
-module top;
+module ram_top;
 
 	//declaring clock and reset
 	bit clock;
@@ -17,7 +17,7 @@ module top;
 	initial
 	begin
 		clock <= 0;
-		forever #5 clock = ~clock;
+		forever #20 clock = ~clock;
 	end
 
 	//driving reset
@@ -39,19 +39,19 @@ module top;
 	.address(intf_inst.address));
 
 	//Instantiating Interface
-	intf intf_inst(
+	ram_interface intf_inst(
 	.clock(clock),
 	.reset(reset));
 
 	//defining config db to access variables inside testbench components
 	initial
 	begin
-		uvm_config_db#(virtual intf.mp_driver)::set(null, "", "vif", intf_inst.mp_driver);
-		uvm_config_db#(virtual intf.mp_in_monitor)::set(null, "", "vif", intf_inst.mp_in_monitor);
-		uvm_config_db#(virtual intf.mp_out_monitor)::set(null, "", "vif", intf_inst.mp_out_monitor);
+		uvm_config_db#(virtual ram_interface.mp_driver)::set(null, "", "vif", intf_inst.mp_driver);
+		uvm_config_db#(virtual ram_interface.mp_in_monitor)::set(null, "", "vif", intf_inst.mp_in_monitor);
+		uvm_config_db#(virtual ram_interface.mp_out_monitor)::set(null, "", "vif", intf_inst.mp_out_monitor);
 
 		//initiating the simulation
-		run_test("test");
+		run_test("ram_test");
 	end
 
 	//defining waveform file

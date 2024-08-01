@@ -2,14 +2,14 @@ import uvm_pkg::*;
 
 `include "uvm_macros.svh"
 
-class reference extends uvm_component;
+class ram_reference extends uvm_component;
 
-	`uvm_component_utils(reference);
+	`uvm_component_utils(ram_reference);
 
-	uvm_analysis_imp #(sequence_item, reference) ref2in_mon;
-	uvm_nonblocking_put_port #(sequence_item) ref2sb;
+	uvm_analysis_imp #(ram_sequence_item, ram_reference) ref2in_mon;
+	uvm_nonblocking_put_port #(ram_sequence_item) ref2sb;
 
-	sequence_item in_mon_packet; 
+	ram_sequence_item in_mon_packet; 
 
 	virtual intf.mp_in_monitor vif;
 
@@ -21,13 +21,13 @@ class reference extends uvm_component;
 
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-		in_mon_packet = sequence_item::type_id::create("in_mon_packet", this);
+		in_mon_packet = ram_sequence_item::type_id::create("in_mon_packet", this);
 		ref2in_mon = new("ref2in_mon", this);
 		ref2sb = new("ref2sb", this);
-		uvm_config_db #(virtual intf.mp_in_monitor)::get(this, "", "vif", vif);
+		uvm_config_db #(virtual ram_interface.mp_in_monitor)::get(this, "", "vif", vif);
 	endfunction
 
-	function write(sequence_item packet);
+	function write(ram_sequence_item packet);
 		int ack;
 		in_mon_packet = packet;
 	

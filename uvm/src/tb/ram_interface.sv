@@ -1,4 +1,4 @@
-interface intf(
+interface ram_interface(
 	input clock,
 	input reset);
 

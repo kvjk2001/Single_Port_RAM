@@ -1,5 +1,5 @@
 //`include "macros.sv"
-class ram_sequence extends uvm_sequence #(sequence_item);
+class ram_sequence extends uvm_sequence #(ram_sequence_item);
 
 	//Registering sequence class with factory
 	`uvm_object_utils(ram_sequence)
@@ -27,7 +27,7 @@ class write_sequence extends ram_sequence;
 
 	task body();
 
-  	sequence_item packet = sequence_item::type_id::create("packet");
+  	ram_sequence_item packet = ram_sequence_item::type_id::create("packet");
 	
 		repeat(`no_of_seq)
 		begin
@@ -49,7 +49,7 @@ class read_sequence extends ram_sequence;
 	endfunction
 
 	task body();
-		sequence_item packet = sequence_item::type_id::create("packet");
+		ram_sequence_item packet = ram_sequence_item::type_id::create("packet");
 
 		repeat(`no_of_seq)
 		begin

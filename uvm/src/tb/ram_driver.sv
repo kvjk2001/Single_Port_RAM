@@ -1,13 +1,13 @@
-class driver extends uvm_driver #(sequence_item);
+class ram_driver extends uvm_driver #(ram_sequence_item);
 
 	//Registering driver class in factory
-	`uvm_component_utils(driver)
+	`uvm_component_utils(ram_driver)
 
 	//declaring a virtual interface for driver
 	virtual intf.mp_driver vif;
 
 	//declaring a handle for sequence item
-	sequence_item packet;	
+	ram_sequence_item packet;	
 
 	extern function new(string name = "driver", uvm_component parent);
 	extern function void build_phase(uvm_phase phase);
@@ -17,24 +17,24 @@ class driver extends uvm_driver #(sequence_item);
 endclass
 
 	//defining class constructor
-	function driver::new(string name = "driver", uvm_component parent);
+	function ram_driver::new(string name = "driver", uvm_component parent);
 		super.new(name, parent);
 	endfunction
 
 	//defining build phase
-	function void driver::build_phase(uvm_phase phase);
+	function void ram_driver::build_phase(uvm_phase phase);
 		super.build_phase(phase);
 	
-		if(!uvm_config_db #(virtual intf.mp_driver) :: get (this, "", "vif", vif))
+		if(!uvm_config_db #(virtual ram_interface.mp_driver) :: get (this, "", "vif", vif))
 		begin
 			`uvm_fatal("driver", "Unable to get the virtual interface");
 		end
 
-		packet = sequence_item::type_id::create("packet", this);
+		packet = ram_sequence_item::type_id::create("packet", this);
 	endfunction
 
 	//defining run phase 
-	task driver::run_phase(uvm_phase phase);
+	task ram_driver::run_phase(uvm_phase phase);
 		repeat(1) @(vif.cb_driver);
 
 		forever
@@ -57,7 +57,7 @@ endclass
 	endtask
 
 	//driving inputs to DUT
-	task driver::drive();
+	task ram_driver::drive();
 		@(vif.cb_driver)
 		begin
 			vif.cb_driver.data_in <= packet.data_in;

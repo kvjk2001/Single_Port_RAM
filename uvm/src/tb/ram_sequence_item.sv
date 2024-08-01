@@ -1,4 +1,4 @@
-class sequence_item extends uvm_sequence_item;
+class ram_sequence_item extends uvm_sequence_item;
 
 	//Input and output field declaration
 	rand bit [`width-1:0] data_in;
@@ -8,7 +8,7 @@ class sequence_item extends uvm_sequence_item;
 	bit [`width-1:0] data_out;
  
 	//Registering sequence_item class with factory
-	`uvm_object_utils_begin (sequence_item)
+	`uvm_object_utils_begin (ram_sequence_item)
 	`uvm_field_int (data_in, UVM_DEFAULT)
 	`uvm_field_int (write_enable, UVM_DEFAULT)
 	`uvm_field_int (read_enable, UVM_DEFAULT)
@@ -20,7 +20,7 @@ class sequence_item extends uvm_sequence_item;
 endclass
 
 	//defining class constructor
-	function sequence_item::new(string name = "sequence_item");
+	function ram_sequence_item::new(string name = "sequence_item");
 		super.new(name);
 	endfunction
 

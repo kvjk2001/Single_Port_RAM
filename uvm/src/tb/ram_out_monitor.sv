@@ -1,16 +1,16 @@
-class out_monitor extends uvm_monitor;
+class ram_out_monitor extends uvm_monitor;
 
 	//Registering output monitor of passive agent to factory
-	`uvm_component_utils(out_monitor)
+	`uvm_component_utils(ram_out_monitor)
 
 	//declaring virtual interface
 	virtual intf.mp_out_monitor vif;
 
 	//declaring analysis port for output monitor to coverage/scoreboard connection
-	uvm_analysis_port #(sequence_item) out_mon2cov_sb;
+	uvm_analysis_port #(ram_sequence_item) out_mon2cov_sb;
 
 	//declaring handle for sequence item
-	sequence_item packet;
+	ram_sequence_item packet;
 
 	extern function new(string name = "out_monitor", uvm_component parent);
 	extern function void build_phase(uvm_phase phase);
@@ -18,24 +18,24 @@ class out_monitor extends uvm_monitor;
 endclass
 
 	//defining class constructor
-	function out_monitor::new(string name = "out_monitor", uvm_component parent);
+	function ram_out_monitor::new(string name = "out_monitor", uvm_component parent);
 		super.new(name, parent);
 	endfunction
 
 	//defining build phase
-	function void out_monitor::build_phase(uvm_phase phase);
+	function void ram_out_monitor::build_phase(uvm_phase phase);
 		super.build_phase(phase);
 
-		if(!uvm_config_db #(virtual intf.mp_out_monitor) :: get(this, "", "vif", vif))
+		if(!uvm_config_db #(virtual ram_interface.mp_out_monitor) :: get(this, "", "vif", vif))
 			`uvm_fatal("monitor", "Unable to get virtual interface")
 
 		out_mon2cov_sb = new("out_mon2cov_sb", this);
 
-		packet = sequence_item::type_id::create("packet", this);
+		packet = ram_sequence_item::type_id::create("packet", this);
 	endfunction
 
 	//defining run phase
-	task out_monitor::run_phase(uvm_phase phase);
+	task ram_out_monitor::run_phase(uvm_phase phase);
 		repeat(3) @(vif.cb_out_monitor);
 	
 		forever

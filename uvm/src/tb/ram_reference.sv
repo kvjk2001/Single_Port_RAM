@@ -11,7 +11,7 @@ class ram_reference extends uvm_component;
 
 	ram_sequence_item in_mon_packet; 
 
-	virtual intf.mp_in_monitor vif;
+	virtual ram_interface.mp_in_monitor vif;
 
 	reg [7:0] mem [255:0];
 

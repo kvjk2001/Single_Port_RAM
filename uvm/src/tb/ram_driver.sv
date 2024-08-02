@@ -4,7 +4,7 @@ class ram_driver extends uvm_driver #(ram_sequence_item);
 	`uvm_component_utils(ram_driver)
 
 	//declaring a virtual interface for driver
-	virtual intf.mp_driver vif;
+	virtual ram_interface.mp_driver vif;
 
 	//declaring a handle for sequence item
 	ram_sequence_item packet;	

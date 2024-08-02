@@ -38,7 +38,7 @@ endclass
 		phase.raise_objection(this);
 		packet_seq.start(env.a_agent.seq);
 		phase.drop_objection(this);
-		phase.phase_done.set_drain_time(this, 30);
+		phase.phase_done.set_drain_time(this, 120);
 	endtask
 
 

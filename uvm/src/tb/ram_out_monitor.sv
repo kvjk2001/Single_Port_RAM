@@ -4,7 +4,7 @@ class ram_out_monitor extends uvm_monitor;
 	`uvm_component_utils(ram_out_monitor)
 
 	//declaring virtual interface
-	virtual intf.mp_out_monitor vif;
+	virtual ram_interface.mp_out_monitor vif;
 
 	//declaring analysis port for output monitor to coverage/scoreboard connection
 	uvm_analysis_port #(ram_sequence_item) out_mon2cov_sb;

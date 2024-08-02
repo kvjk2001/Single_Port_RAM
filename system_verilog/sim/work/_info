@@ -1,0 +1,111 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/fetools/work_area/frontend/vijaykrishnan/repos/Single_Port_RAM/system_verilog/sim
+vram_design
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 T@nWYaJ=5MAPCl^5L=MO=2
+IBT_Y=4b7c4a2C[4_z^d6S0
+Z3 !s105 ram_top_sv_unit
+S1
+R0
+Z4 w1722531846
+8../src/tb/../rtl/ram_design.v
+F../src/tb/../rtl/ram_design.v
+L0 1
+Z5 OE;L;10.6c;65
+Z6 !s108 1722571557.000000
+Z7 !s107 ../src/tb/ram_test.sv|../src/tb/ram_env.sv|../src/tb/ram_sb.sv|../src/tb/ram_ref.sv|../src/tb/ram_mon.sv|../src/tb/ram_drv.sv|../src/tb/ram_gtr.sv|../src/tb/ram_tx.sv|../src/tb/ram_pkg.sv|../src/tb/ram_intf.sv|../src/tb/../rtl/ram_design.v|../src/tb/macros.svh|../src/tb/ram_top.sv|
+Z8 !s90 -l|compile.log|../src/tb/ram_top.sv|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+Yram_intf
+R1
+R2
+r1
+!s85 0
+31
+!i10b 1
+!s100 0z8[?Eg9G<`nma19XSbQ`3
+I9Khbf7P;R4:<iM?@W?B3h2
+R3
+S1
+R0
+w1722571551
+8../src/tb/ram_intf.sv
+F../src/tb/ram_intf.sv
+L0 12
+R5
+R6
+R7
+R8
+!i113 0
+R9
+R10
+Xram_pkg
+!s115 ram_intf
+R1
+V_HM8c=`EZ?DE]]ORdZVgC3
+r1
+!s85 0
+31
+!i10b 1
+!s100 JEd1?zNFGK?oK6gaRC=<W0
+I_HM8c=`EZ?DE]]ORdZVgC3
+S1
+R0
+w1722571365
+F../src/tb/ram_pkg.sv
+F../src/tb/ram_tx.sv
+F../src/tb/macros.svh
+F../src/tb/ram_gtr.sv
+F../src/tb/ram_drv.sv
+F../src/tb/ram_mon.sv
+F../src/tb/ram_ref.sv
+F../src/tb/ram_sb.sv
+F../src/tb/ram_env.sv
+F../src/tb/ram_test.sv
+L0 1
+R5
+R6
+R7
+R8
+!i113 0
+R9
+R10
+vtop
+R1
+DXx4 work 7 ram_pkg 0 22 _HM8c=`EZ?DE]]ORdZVgC3
+R2
+r1
+!s85 0
+31
+!i10b 1
+!s100 P2iJSJWKY5U2zQX0QilSZ0
+ILGQlg`IoD1ZRAoYN`TBJO1
+R3
+S1
+R0
+R4
+8../src/tb/ram_top.sv
+F../src/tb/ram_top.sv
+L0 17
+R5
+R6
+R7
+R8
+!i113 0
+R9
+R10
